@@ -1,0 +1,18 @@
+# Questify Collab Backend requirements
+fastapi>=0.110
+uvicorn[standard]>=0.22
+python-dotenv>=1.0
+supabase>=2.3
+PyJWT>=2.8
+httpx>=0.27
+groq>=0.9.0
+pydantic>=2.6
+typing-extensions>=4.9
+
+# Dev and test tooling
+pytest
+requests
+pre-commit
+black
+ruff
+isort

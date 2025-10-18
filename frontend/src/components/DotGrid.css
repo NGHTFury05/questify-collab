@@ -1,0 +1,30 @@
+/* frontend/src/components/DotGrid.css */
+.dot-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.dot-grid__wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dot-grid__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* So background dots don't overpower foreground UI */
+  opacity: 0.27;
+}
+
+/* Subdued variant for dark mode to reduce glare */
+.dot-grid--subdued .dot-grid__canvas {
+  opacity: 0.18;
+}

@@ -1,0 +1,62 @@
+# Root Git ignore for Questify Collab
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.log
+*.tmp
+*.cache/
+.pytest_cache/
+.mypy_cache/
+.tox/
+.coverage
+htmlcov/
+.coverage.*
+*.egg-info/
+dist/
+build/
+
+# Virtualenvs
+backend/.venv/
+.venv/
+venv/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+pnpm-lock.yaml
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files (never commit secrets)
+.env
+.env.*
+*.env
+backend/.env
+frontend/.env
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# OS-generated
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local data/caches/backups
+*.bak
+*.orig
+*.rej
+
+# Docker artifacts (if any)
+docker-data/

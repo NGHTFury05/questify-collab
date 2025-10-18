@@ -1,0 +1,109 @@
+/* frontend/src/index.css */
+
+/* Base layout and background to avoid white-on-white UI */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px circle at 10% 0%, #0b1020 0%, #080b16 50%, #060910 100%);
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Ensure background effects sit behind content */
+.app-bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Foreground content above background */
+.content-layer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* DotGrid should also span fullscreen when used as background */
+.dot-grid.app-bg-layer {
+  position: fixed;
+  inset: 0;
+}
+
+/* Utility text styles used by pages */
+.gradient-text {
+  background: linear-gradient(90deg, #64ffda, #00bcd4, #5227ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-primary { color: #ffffff; }
+.text-muted { color: rgba(255, 255, 255, 0.78); }
+
+/* Glass button used on auth pages */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+/* Keep previous FluidGlass helpers (harmless when unused) */
+.fluid-glass-content {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.fluid-glass-content h1,
+.fluid-glass-content h2,
+.fluid-glass-content h3,
+.fluid-glass-content h4,
+.fluid-glass-content h5,
+.fluid-glass-content h6 {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.fluid-glass-content p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.fluid-glass-content .chakra-button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+.fluid-glass-content .chakra-button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+}
+
+/* Force dark background even if Chakra reset injects later styles */
+body {
+  background: radial-gradient(1200px circle at 10% 0%, #0b1020 0%, #080b16 50%, #060910 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Glass card wrapper used on auth pages */
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Simple enter animation for cards */
+.float-animation {
+  animation: floatUp 0.6s ease-out;
+}
+@keyframes floatUp {
+  from { transform: translateY(8px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
